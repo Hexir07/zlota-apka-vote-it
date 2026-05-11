@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorSurface">#1E1E1E</item>
+        <item name="colorOnSurface">#EEEEEE</item>
+        <item name="colorSurfaceVariant">#2A2A2A</item>
+        <item name="colorOnSurfaceVariant">#AAAAAA</item>
+        <item name="android:colorBackground">#1E1E1E</item>
+        <item name="android:textColorPrimary">#EEEEEE</item>
+        <item name="android:textColorSecondary">#AAAAAA</item>
+        <item name="android:textColorHint">#777777</item>
+        <item name="android:windowBackground">#1E1E1E</item>
+        <!-- Pasek nawigacji i statusu -->
+        <item name="android:navigationBarColor">#1E1E1E</item>
+        <item name="android:statusBarColor">#1E1E1E</item>
+        <!-- BottomSheetDialog tło -->
+        <item name="bottomSheetStyle">@style/DarkBottomSheetStyle</item>
+    </style>
+
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+
+    <!-- BottomSheetDialog w trybie ciemnym — tło #1E1E1E zamiast czarnego -->
+    <style name="DarkBottomSheetStyle" parent="Widget.Material3.BottomSheet">
+        <item name="android:background">@color/surface_dark</item>
+    </style>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="0dp" android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/refreshBtn"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
+        app:fabSize="mini"
+        app:backgroundTint="?attr/colorSurfaceVariant"
+        app:tint="?attr/colorOnSurfaceVariant"
+        android:src="@android:drawable/ic_popup_sync"
+        android:elevation="6dp" app:maxImageSize="22dp"
+        android:contentDescription="@string/refresh_map"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchCard"
+        android:layout_width="0dp" android:layout_height="52dp"
+        android:layout_marginStart="16dp" android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true" android:focusable="true"
+        app:cardCornerRadius="26dp" app:cardElevation="6dp"
+        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/refreshBtn"
+        app:layout_constraintBottom_toBottomOf="@id/refreshBtn">
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingStart="16dp" android:paddingEnd="16dp"
+            android:clickable="false" android:focusable="false">
+            <ImageView
+                android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:scaleType="fitCenter"
+                android:importantForAccessibility="no"
+                android:clickable="false" android:focusable="false"/>
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/search_hint"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="15sp"
+                android:clickable="false" android:focusable="false"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fabCard"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        app:cardCornerRadius="40dp" app:cardElevation="0dp"
+        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingStart="10dp" android:paddingEnd="10dp"
+            android:paddingTop="10dp" android:paddingBottom="10dp"
+            android:clipChildren="false" android:clipToPadding="false">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/leftBtn"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_margin="6dp" app:fabSize="mini"
+                app:backgroundTint="#a1d600" app:tint="#000000"
+                android:src="@android:drawable/ic_menu_mapmode"
+                android:elevation="0dp" app:maxImageSize="20dp"
+                android:outlineSpotShadowColor="@color/fab_shadow_color"
+                android:foreground="@drawable/glossy_drawable"
+                android:contentDescription="@string/top_pins"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/rightBtn"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_margin="6dp" app:fabSize="mini"
+                app:backgroundTint="#a1d600" app:tint="#000000"
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:outlineSpotShadowColor="@color/fab_shadow_color"
+                android:elevation="0dp" app:maxImageSize="20dp"
+                android:foreground="@drawable/glossy_drawable"
+                android:contentDescription="@string/my_location"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addPinBtn"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_margin="8dp" app:fabSize="normal"
+                app:backgroundTint="#ff1500" app:tint="#FFFFFF"
+                app:fabCustomSize="70dp"
+                android:src="@android:drawable/ic_input_add"
+                android:outlineSpotShadowColor="@color/fab_shadow_color"
+                android:elevation="10dp" android:padding="10dp"
+                app:maxImageSize="40dp"
+                android:foreground="@drawable/glossy_drawable"
+                android:contentDescription="@string/add_pin_cd"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/settingsBtn"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_margin="6dp" app:fabSize="mini"
+                app:backgroundTint="#ffbf00" app:tint="#000000"
+                android:outlineSpotShadowColor="@color/fab_shadow_color"
+                android:src="@android:drawable/ic_menu_preferences"
+                android:elevation="0dp" app:maxImageSize="20dp"
+                android:foreground="@drawable/glossy_drawable"
+                android:contentDescription="@string/settings_cd"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/userBtn"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_margin="6dp" app:fabSize="mini"
+                app:backgroundTint="#ffbf00" app:tint="#000000"
+                android:outlineSpotShadowColor="@color/fab_shadow_color"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:elevation="0dp" app:maxImageSize="20dp"
+                android:foreground="@drawable/glossy_drawable"
+                android:contentDescription="@string/profile_cd"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VoteIt</string>
+
+    <!-- Login screen -->
+    <string name="login_tagline">Głosuj na miejsca wokół Ciebie</string>
+    <string name="login_title_login">Witaj z powrotem</string>
+    <string name="login_subtitle_login">Zaloguj się do VoteIt</string>
+    <string name="login_title_register">Utwórz konto</string>
+    <string name="login_subtitle_register">Zarejestruj się w VoteIt</string>
+    <string name="login_label_username">Nazwa użytkownika</string>
+    <string name="login_hint_username">np. jan_kowalski</string>
+    <string name="login_label_email">Email</string>
+    <string name="login_hint_email">adres@email.com</string>
+    <string name="login_label_password">Hasło</string>
+    <string name="login_hint_password">min. 6 znaków</string>
+    <string name="login_btn_login">ZALOGUJ SIĘ</string>
+    <string name="login_btn_register">ZAREJESTRUJ SIĘ</string>
+    <string name="login_switch_to_register">Nie masz konta? Zarejestruj się</string>
+    <string name="login_switch_to_login">Masz konto? Zaloguj się</string>
+    <string name="login_back">← Wróć bez logowania</string>
+    <string name="login_fill_fields">Wypełnij email i hasło</string>
+    <string name="login_fill_username">Podaj nazwę użytkownika</string>
+    <string name="login_error">Błąd logowania</string>
+    <string name="register_error">Błąd rejestracji</string>
+    <string name="register_confirm_email">Sprawdź email, aby potwierdzić konto</string>
+    <string name="profile_guest">Użytkownik</string>
+
+    <!-- Map / main screen -->
+    <string name="search_hint">Szukaj miejsca...</string>
+    <string name="search_hint_city">Podaj miasto (np. Kraków)</string>
+    <string name="search_title">Szukaj miejsca</string>
+    <string name="search_loading">Szukam…</string>
+    <string name="search_empty">Nie znaleziono miejsca.</string>
+    <string name="search_error">Błąd wyszukiwania</string>
+    <string name="search_go">→</string>
+    <string name="refresh_map">Odśwież mapę</string>
+    <string name="refreshing">Odświeżam pinezki…</string>
+    <string name="top_pins">Top pinezki</string>
+    <string name="my_location">Moja lokalizacja</string>
+    <string name="add_pin_cd">Dodaj pinezkę</string>
+    <string name="settings_cd">Ustawienia</string>
+    <string name="profile_cd">Profil użytkownika</string>
+    <string name="tap_map_to_pin">Kliknij na mapie, aby dodać pinezkę</string>
+    <string name="login_required_pin">Zaloguj się, aby dodać pinezkę</string>
+    <string name="gps_locating">Ustalanie pozycji GPS…</string>
+
+    <!-- Add pin sheet -->
+    <string name="add_pin_title">Dodaj pinezkę</string>
+    <string name="pin_name_label">Nazwa</string>
+    <string name="pin_desc_label">Opis</string>
+    <string name="pin_desc_hint">Opis Pineski</string>
+    <string name="pin_submit">Zatwierdź</string>
+    <string name="pin_name_empty">Nazwa nie może być pusta</string>
+
+    <!-- Pin detail sheet -->
+    <string name="pin_default_title">Nazwa pinezki</string>
+    <string name="pin_no_desc">Brak opisu.</string>
+    <string name="pin_unknown_author">Autor nieznany</string>
+    <string name="pin_loading_author">Ładowanie…</string>
+    <string name="upvote">↑ Upvote</string>
+    <string name="downvote">↓ Downvote</string>
+    <string name="upvote_done">✓ Upvote</string>
+    <string name="downvote_done">✓ Downvote</string>
+    <string name="vote_login">↑ Zaloguj się</string>
+    <string name="vote_login_down">↓ Zaloguj się</string>
+    <string name="vote_syncing_up">↑ sync…</string>
+    <string name="vote_syncing_down">↓ sync…</string>
+    <string name="voted_up">👍 Zagłosowano!</string>
+    <string name="voted_down">👎 Zagłosowano!</string>
+    <string name="vote_removed">Głos usunięty</string>
+    <string name="pin_delete_btn">🗑  Usuń tę pinezkę</string>
+    <string name="pin_delete_title">Usuń pinezkę</string>
+    <string name="pin_delete_message">Na pewno chcesz usunąć tę pinezkę? Tej operacji nie można cofnąć.</string>
+    <string name="pin_delete_confirm">Usuń</string>
+    <string name="pin_delete_cancel">Anuluj</string>
+    <string name="pin_deleted">Pinezka usunięta</string>
+    <string name="pin_delete_no_permission">Brak uprawnień — tylko autor może usunąć pinezkę</string>
+    <string name="pin_delete_error_no_id">Błąd: brak ID pinezki</string>
+
+    <string name="pin_author_unknown">Nieznany</string>
+    <string name="pin_err_delete_code">Błąd %1$d: %2$s</string>
+    <string name="pin_err_connection">Błąd połączenia: %s</string>
+    <string name="username_changed">✅ Nazwa zmieniona na: %s</string>
+    <string name="username_err_code">Błąd zmiany nazwy (kod %d)</string>
+    <string name="fav_removed">Usunięto z ulubionych</string>
+    <string name="fav_added">Dodano do ulubionych ❤️</string>
+    <string name="search_not_found">Nie znaleziono miejsca</string>
+    <string name="map_gps_no_signal">Brak sygnału GPS — spróbuj na zewnątrz</string>
+    <string name="pin_default_name">Pinezka</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_id">voteit_votes</string>
+    <string name="notif_channel_name">Głosy na pinezki</string>
+    <string name="notif_channel_desc">Powiadomienia gdy ktoś zagłosuje na Twoją pinezkę</string>
+    <string name="notif_upvote_title">Nowy głos! 👍</string>
+    <string name="notif_upvote_body">Ktoś zagłosował na Twoją pinezkę „%1$s"</string>
+
+    <!-- Settings -->
+    <string name="settings_title">⚙️ Ustawienia</string>
+    <string name="settings_theme">Motyw</string>
+    <string name="settings_theme_light">☀️  Jasny</string>
+    <string name="settings_theme_dark">🌙  Ciemny</string>
+    <string name="settings_theme_system">📱  Zgodny z urządzeniem</string>
+    <string name="settings_notifications">Powiadomienia</string>
+    <string name="settings_notif_enable">🔔  Włącz powiadomienia</string>
+    <string name="settings_language">Język</string>
+    <string name="settings_save">Zapisz</string>
+    <string name="settings_reset">Resetuj</string>
+    <string name="settings_saved">✅ Zapisano ustawienia</string>
+
+    <!-- Profile -->
+    <string name="profile_logged_in">Zalogowany</string>
+    <string name="profile_my_pins">📍 Moje pinezki (%1$d)</string>
+    <string name="profile_no_pins">Nie dodałeś jeszcze żadnej pinezki.\nKliknij + na mapie, aby dodać pierwszą.</string>
+    <string name="profile_favorites">❤️ Moje ulubione</string>
+    <string name="profile_no_favorites">Nie masz jeszcze żadnych ulubionych pinesek.\nKliknij ♡ na pinezce, aby ją dodać.</string>
+    <string name="profile_logout">Wyloguj się</string>
+    <string name="profile_logout_confirm">Na pewno chcesz się wylogować?</string>
+    <string name="profile_logout_yes">Wyloguj</string>
+    <string name="profile_username_change">Zmień nazwę użytkownika</string>
+    <string name="profile_username_hint">Nowa nazwa użytkownika</string>
+    <string name="profile_username_empty">Nazwa nie może być pusta</string>
+    <string name="profile_username_short">Nazwa musi mieć min. 3 znaki</string>
+    <string name="profile_username_changed">✅ Nazwa zmieniona na: %1$s</string>
+
+    <!-- Leaderboard -->
+    <string name="leaderboard_title">🏆 Top 10 pinesek</string>
+    <string name="leaderboard_empty">Brak pinesek w bazie</string>
+    <string name="leaderboard_error">Błąd pobierania top pinesek</string>
+
+    <!-- Errors / generic -->
+    <string name="error_connection">Błąd połączenia</string>
+    <string name="error_connection_detail">Błąd połączenia: %1$s</string>
+    <string name="error_generic">Błąd: %1$d – %2$s</string>
+    <string name="error_username_change">Błąd zmiany nazwy (kod %1$d)</string>
+    <string name="error_my_pins">Błąd pobierania pinezek</string>
+    <string name="error_favorites">Błąd pobierania ulubionych</string>
+
+    <!-- Login — brakujące hardcoded strings -->
+    <string name="login_waiting">Proszę czekać…</string>
+    <string name="login_btn_login_short">Zaloguj się</string>
+    <string name="login_btn_register_short">Zarejestruj się</string>
+
+    <!-- Settings — brakujące hardcoded strings -->
+    <string name="settings_language_label">🌐  Język aplikacji</string>
+    <string name="profile_favorites_label">Moje ulubione</string>
+    <string name="profile_favorites_sub">Pinezki które polubiłeś</string>
+    <string name="profile_my_pins_label">Moje pinezki</string>
+    <string name="profile_my_pins_sub">Pinezki które dodałeś</string>
+</resources>
