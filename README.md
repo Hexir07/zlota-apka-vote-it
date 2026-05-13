@@ -6,7 +6,7 @@ VoteIt to aplikacja mobilna na Androida, która pozwala użytkownikom oznaczać 
 
 Aplikacja wymaga założenia konta, które zapewnia bezpieczeństwo danych i gwarantuje, że każdy użytkownik może głosować tylko raz na daną pinezkę. Autor pinezki ma możliwość jej usunięcia w dowolnym momencie bezpośrednio z poziomu mapy.
 
-<img width="1080" height="2400" alt="Screenshot_20260513_200652" src="https://github.com/user-attachments/assets/47efd209-35fc-46c8-ac0e-e14b495abec5" />
+<img width="360" height="800" alt="Screenshot_20260513_200652" src="https://github.com/user-attachments/assets/47efd209-35fc-46c8-ac0e-e14b495abec5" />
 
 ## Funkcje aplikacji
 
@@ -28,7 +28,7 @@ Aplikacja wymaga założenia konta, które zapewnia bezpieczeństwo danych i gwa
 - [@kapi633](https://github.com/kapi633)
 
 
-<img width="2560" height="1600" alt="Screenshot_20260513_200348" src="https://github.com/user-attachments/assets/c3bc8f52-e4e1-4947-a0c9-b1da019d821f" />
+<img width="1280" height="800" alt="Screenshot_20260513_200348" src="https://github.com/user-attachments/assets/c3bc8f52-e4e1-4947-a0c9-b1da019d821f" />
 
 ## Dalsze plany
 
