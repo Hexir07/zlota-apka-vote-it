@@ -66,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
     // Constants
     // -------------------------------------------------------------------------
 
-    private static final int LOCATION_PERMISSION_CODE = 1;
+    private static final int LOCATION_PERMISSION_CODE     = 1;
+    private static final int NOTIFICATION_PERMISSION_CODE = 2;
     private static final String PREFS_NAME  = "map_prefs";
     private static final String KEY_LAT     = "last_lat";
     private static final String KEY_LON     = "last_lon";
@@ -346,12 +347,32 @@ public class MainActivity extends AppCompatActivity {
                 == PackageManager.PERMISSION_GRANTED;
     }
 
+    /** Zwraca true jeśli uprawnienie POST_NOTIFICATIONS jest już przyznane lub API < 33. */
+    private boolean hasNotificationPermission() {
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.TIRAMISU) return true;
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                == PackageManager.PERMISSION_GRANTED;
+    }
+
+    /** Prosi o POST_NOTIFICATIONS jeśli jeszcze nie przyznane (tylko Android 13+). */
+    private void requestNotificationPermissionIfNeeded() {
+        if (hasNotificationPermission()) return;
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.POST_NOTIFICATIONS},
+                NOTIFICATION_PERMISSION_CODE);
+    }
+
     private void checkLocationPermission() {
-        if (hasLocationPermission()) getUserLocation();
-        else ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
-                        Manifest.permission.ACCESS_COARSE_LOCATION},
-                LOCATION_PERMISSION_CODE);
+        if (hasLocationPermission()) {
+            getUserLocation();
+            // Lokalizacja już przyznana — zapytaj też o powiadomienia
+            requestNotificationPermissionIfNeeded();
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
+                            Manifest.permission.ACCESS_COARSE_LOCATION},
+                    LOCATION_PERMISSION_CODE);
+        }
     }
 
     @Override
@@ -360,8 +381,18 @@ public class MainActivity extends AppCompatActivity {
         if (code == LOCATION_PERMISSION_CODE) {
             boolean granted = false;
             for (int r : results) if (r == PackageManager.PERMISSION_GRANTED) { granted = true; break; }
-            if (granted) getUserLocation(); else showCityInputDialog();
+            if (granted) {
+                getUserLocation();
+                // Po przyznaniu lokalizacji — zapytaj o powiadomienia
+                requestNotificationPermissionIfNeeded();
+            } else {
+                showCityInputDialog();
+                // Lokalizacja odrzucona — i tak zapytaj o powiadomienia
+                requestNotificationPermissionIfNeeded();
+            }
         }
+        // NOTIFICATION_PERMISSION_CODE — nie wymaga żadnej akcji;
+        // powiadomienia będą działać automatycznie jeśli uprawnienie zostało przyznane
     }
 
     @SuppressWarnings("MissingPermission")
